@@ -1,14 +1,19 @@
 package com.example.sara.voorbeeldexamen3;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MyHighscore extends AppCompatActivity {
 
+    ImageButton btn;
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +25,19 @@ public class MyHighscore extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.txtScore);
         textView.setText(Long.toString(score)+ " ms");
 
+        //image button
+        btn = (ImageButton) findViewById(R.id.btnImage);
+        btn.setOnClickListener(imgButtonHandler);
+
+
     }
+
+    View.OnClickListener imgButtonHandler = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            btn.setImageResource(R.drawable.dog);
+        }
+    };
 
     public void sendSMS(View v)
     {
