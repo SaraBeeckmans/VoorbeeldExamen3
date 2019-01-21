@@ -27,11 +27,14 @@ public class ListHighScore extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_high_score);
 
-        Bundle b = getIntent().getExtras();
-        long score = b.getLong("score");
+//        Bundle b = getIntent().getExtras();
+//        long score = b.getLong("score");
 
 //        TextView textView = (TextView) findViewById(R.id.txtHighScore);
 //        textView.setText(Long.toString(score)+ " ms");
+
+
+        //http://www.vogella.com/tutorials/AndroidListView/article.html?fbclid=IwAR3sqBOYaS99HUS0AIWMCXvGINDwCFb5lfmvazCAVVOSS2qnCtVZC9sTABk
 
         ArrayList<Map<String, String>> list = buildData();
 //        String[] from = { "username", "score" };
@@ -60,8 +63,8 @@ public class ListHighScore extends AppCompatActivity {
 
     private HashMap<String, String> putData(String username, String score, String fullLine) {
         HashMap<String, String> item = new HashMap<String, String>();
-        item.put("username", username);
-        item.put("score", score);
+//        item.put("username", username);
+//        item.put("score", score);
         item.put("fullLine", fullLine);
         return item;
     }

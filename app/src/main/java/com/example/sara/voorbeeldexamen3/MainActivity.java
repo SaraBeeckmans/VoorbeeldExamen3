@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
     }
 
     public void CountClicks(View view){
@@ -40,8 +41,13 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.txtScore);
         textView.setText(Long.toString(differenz)+ " ms");
 
-        Intent i = new Intent(this, ListHighScore.class);
+        Intent i = new Intent(this, MyHighscore.class);
         i.putExtra("score", differenz);
+        startActivity(i);
+    }
+
+    public void onclick(View view){
+        Intent i = new Intent(this, ListHighScore.class);
         startActivity(i);
     }
 }

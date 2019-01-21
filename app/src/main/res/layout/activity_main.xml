@@ -31,6 +31,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtScore" />
 
+    <Button
+        android:id="@+id/btnTopScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Top scores"
+        android:onClick="onclick"
+        app:layout_constraintStart_toEndOf="@+id/btnMyHighscore"
+        app:layout_constraintTop_toBottomOf="@+id/txtScore" />
+
     <TextView
         android:id="@+id/txtScore"
         android:layout_width="wrap_content"

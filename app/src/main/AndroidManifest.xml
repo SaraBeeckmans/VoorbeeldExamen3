@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListHighScore"></activity>
+        <activity android:name=".ListHighScore" />
+        <activity android:name=".MyHighscore"></activity>
     </application>
 
 </manifest>
