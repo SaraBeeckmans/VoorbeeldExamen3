@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             endtime = System.currentTimeMillis();
             differenz= (endtime-starttime);
             sendNotification();
+            clicked=0;
 
         }
     }
